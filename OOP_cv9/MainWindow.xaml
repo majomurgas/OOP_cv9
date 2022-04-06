@@ -1,0 +1,49 @@
+﻿<Window x:Class="OOP_cv9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOP_cv9"
+        mc:Ignorable="d"
+        Title="Calculator" Height="341" Width="452" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" WindowState="Normal">
+    <Grid RenderTransformOrigin="0.47,0.561" HorizontalAlignment="Center" Width="356" Height="287" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="82*"/>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="35.898"/>
+            <ColumnDefinition Width="119*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="41.004"/>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="buttonMC" Content="MC" HorizontalAlignment="Left" Margin="0,15,0,0" VerticalAlignment="Top" Height="46" Width="69" Grid.Row="1" Grid.ColumnSpan="2" Click="Button_Click"/>
+        <Button x:Name="buttonMR" Content="MR" HorizontalAlignment="Left" Margin="24,15,0,0" VerticalAlignment="Top" Height="46" Width="72" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Click="Button_Click"/>
+        <Button x:Name="buttonC" Content="C" HorizontalAlignment="Left" Margin="49,61,0,0" VerticalAlignment="Top" Height="46" Width="71" Grid.Row="1" Grid.Column="5" Click="Button_Click"/>
+        <Button x:Name="buttonCE" Content="CE" HorizontalAlignment="Left" Margin="47,15,0,0" VerticalAlignment="Top" Height="46" Width="73" Grid.Row="1" Grid.Column="5" Click="Button_Click"/>
+        <Button x:Name="button7" Content="7" HorizontalAlignment="Left" Margin="0,61,0,0" VerticalAlignment="Top" Height="46" Width="69" Grid.Row="1" FontSize="16" Grid.ColumnSpan="2" Click="Button_Click"/>
+        <Button x:Name="button8" Content="8" Margin="24,61,26,0" VerticalAlignment="Top" Height="46" Grid.Row="1" FontSize="16" Grid.Column="1" Grid.ColumnSpan="2" Click="Button_Click"/>
+        <Button x:Name="button9" Content="9" HorizontalAlignment="Right" Margin="0,61,22,0" VerticalAlignment="Top" Height="46" Width="74" Grid.Row="1" FontSize="16" Grid.Column="2" Grid.ColumnSpan="3" Click="Button_Click"/>
+        <Button x:Name="button__" Content="/" Margin="14,61,71,0" VerticalAlignment="Top" Height="46" Grid.Row="1" FontSize="16" Grid.Column="4" Click="Button_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="pamat1" Content="MS" Margin="56,15,23,0" VerticalAlignment="Top" Height="46" Grid.Row="1" Grid.Column="2" Click="Button_Click" Grid.ColumnSpan="3"/>
+        <Button x:Name="button4" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Height="46" Width="69" Grid.Row="1" FontSize="16" Grid.ColumnSpan="2" Click="Button_Click" Margin="0,107,0,0"/>
+        <Button x:Name="button5" Content="5" HorizontalAlignment="Left" Margin="24,107,0,0" VerticalAlignment="Top" Height="46" Width="73" Grid.Row="1" FontSize="16" Grid.Column="1" Grid.ColumnSpan="2" Click="Button_Click"/>
+        <Button x:Name="button6" Content="6" HorizontalAlignment="Left" Margin="56,107,0,0" VerticalAlignment="Top" Height="46" Width="74" Grid.Row="1" FontSize="16" Grid.Column="2" Grid.ColumnSpan="3" Click="Button_Click"/>
+        <Button x:Name="button_" Content="*" HorizontalAlignment="Right" Margin="0,107,71,0" VerticalAlignment="Top" Height="46" Width="71" Grid.Row="1" FontSize="16" Grid.Column="4" Click="Button_Click" Grid.ColumnSpan="2"/>
+        <Button HorizontalAlignment="Left" Margin="49,107,0,0" VerticalAlignment="Top" Height="46" Width="71" Grid.Row="1" Grid.Column="5"/>
+        <Button Content="1" HorizontalAlignment="Left" Margin="0,153,0,0" VerticalAlignment="Top" Height="46" Width="69" Grid.Row="1" FontSize="16" Grid.ColumnSpan="2" Click="Button_Click"/>
+        <Button Content="2" HorizontalAlignment="Left" Margin="24,153,0,0" VerticalAlignment="Top" Height="46" Width="73" Grid.Row="1" FontSize="16" Grid.Column="1" Grid.ColumnSpan="2" Click="Button_Click"/>
+        <Button x:Name="button3" Content="3" HorizontalAlignment="Left" Margin="56,153,0,0" VerticalAlignment="Top" Height="46" Width="74" Grid.Row="1" FontSize="16" Grid.Column="2" Grid.ColumnSpan="3" Click="Button_Click"/>
+        <Button x:Name="button_Minus" Content="-" HorizontalAlignment="Left" Margin="14,153,0,0" VerticalAlignment="Top" Height="46" Width="71" Grid.Row="1" FontSize="16" Grid.Column="4" Click="Button_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="buttonZero" Content="0" HorizontalAlignment="Right" Margin="0,199,26,0" VerticalAlignment="Top" Height="46" Width="141" Grid.Row="1" FontSize="18" Click="Button_Click" Grid.ColumnSpan="3"/>
+        <Button Content="." HorizontalAlignment="Left" Margin="56,199,0,0" VerticalAlignment="Top" Height="46" Width="74" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3"/>
+        <Button x:Name="buttonEquals" Content="=" HorizontalAlignment="Left" Margin="14,199,0,0" VerticalAlignment="Top" Height="46" Width="71" Grid.Row="1" Grid.Column="4" Click="Button_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="buttonPlus" Grid.Column="5" Content="+" HorizontalAlignment="Left" Height="92" Margin="49,153,0,0" Grid.Row="1" VerticalAlignment="Top" Width="71" Click="Button_Click" FontSize="18"/>
+        <TextBox x:Name="display" Grid.ColumnSpan="6" HorizontalAlignment="Left" Height="46" Margin="0,10,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="355" TextAlignment="Right" FontSize="18"/>
+        <Button x:Name="pamat" Content="MS" HorizontalAlignment="Left" VerticalAlignment="Top" Height="46" Width="142" Click="Button_Click" Grid.Column="4" Margin="13,15,0,0" Grid.Row="1" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>
