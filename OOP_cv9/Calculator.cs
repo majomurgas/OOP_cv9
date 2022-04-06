@@ -26,17 +26,17 @@ namespace OOP_cv9
         public String Display { get; set; }
         public String Pamat { get; set; }
 
-        private string first = "";
         private Operator operation;
+        private string first = "";
         private string second = "";
         private string result = "";
 
-        public void Tlacitko(String btn)
+        public void Tlacitko(String button)
         {
 
             var cislo = "";
 
-            switch (btn)
+            switch (button)
             {
                 case "0":
                     cislo += "0";
@@ -73,18 +73,22 @@ namespace OOP_cv9
                     _stav = Stav.Operace;
                     operation = Operator.Plus;
                     break;
+
                 case "-":
                     _stav = Stav.Operace;
                     operation = Operator.Minus;
                     break;
+
                 case "*":
                     _stav = Stav.Operace;
                     operation = Operator.Krat;
                     break;
+
                 case "/":
                     _stav = Stav.Operace;
                     operation = Operator.Delene;
                     break;
+
                 case "=":
                     _stav = Stav.Vysledek;
                     result = FindAnswer();
@@ -92,24 +96,9 @@ namespace OOP_cv9
                     first = "";
                     second = "";
                     result = "";
-
                     break;
 
                 case "C":
-                    if (_stav == Stav.PrvniCislo)
-                    {
-                        first = "";
-                        Display = first;
-                    }
-                    if (_stav == Stav.DruheCislo)
-                    {
-                        second = "";
-                        Display = second;
-                    }
-
-                    break;
-
-                case "CE":
                     _stav = Stav.PrvniCislo;
                     Display = result;
                     first = "";
